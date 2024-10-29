@@ -4,4 +4,6 @@ end
 
 #moje aliasy
 
-cat="batcat"
+alias cat="batcat"
+alias mv="mv -v"
+alias cp="rsync -ah --progress"
