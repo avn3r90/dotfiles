@@ -5,7 +5,7 @@ end
 #moje aliasy
 
 alias cat="batcat"
-alias ls="eza -l --icons"
+alias ls="eza --icons"
 alias mv="mv -v"
 alias cp="rsync -ah --progress"
 alias fastping="ping -c 100 -s.2"
