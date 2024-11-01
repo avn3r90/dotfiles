@@ -8,6 +8,7 @@
       <value type="string" value="org.freedesktop.network-manager-applet"/>
       <value type="string" value="signal"/>
       <value type="string" value="xfce4-power-manager"/>
+      <value type="string" value="xfce4-settings-helper"/>
     </property>
   </property>
 </channel>

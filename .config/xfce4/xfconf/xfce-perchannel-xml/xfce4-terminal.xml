@@ -3,7 +3,7 @@
 <channel name="xfce4-terminal" version="1.0">
   <property name="misc-default-geometry" type="string" value="144x40"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
-  <property name="font-name" type="string" value="Source Code Pro 11"/>
+  <property name="font-name" type="string" value="Monospace 11"/>
   <property name="misc-toolbar-default" type="bool" value="false"/>
   <property name="shortcuts-no-mnemonics" type="bool" value="true"/>
   <property name="shortcuts-no-menukey" type="bool" value="true"/>
