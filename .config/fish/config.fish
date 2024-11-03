@@ -2,9 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+export EDITOR=micro
+
 #moje aliasy
 
-alias cat="batcat"
+alias cat="bat"
 alias ls="eza --icons"
 alias mv="mv -v"
 alias cp="rsync -ah --progress"
