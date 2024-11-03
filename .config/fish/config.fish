@@ -4,17 +4,20 @@ end
 
 export EDITOR=micro
 
-#moje aliasy
-
+#ogolne
 alias cat="bat"
 alias ls="eza --icons"
 alias mv="mv -v"
 alias cp="rsync -ah --progress"
-alias fastping="ping -c 100 -s.2"
 alias poweroff="sudo /sbin/poweroff"
 alias lu="du -sh * | sort -h" 
-alias lt="ls --human-readable --size -1 -S --classify"
 alias rm="rm -rf"
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias showupdate="apt list --upgradable"
+
+#aliasy yadm
+alias ya="yadm add"
+alias yc="yadm commit"
+alias ys="yadm status"
+alias yp="yadm push"
