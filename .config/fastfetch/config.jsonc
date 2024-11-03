@@ -14,7 +14,7 @@
     "break",
     {
       "type": "custom",
-      "format": "  󰊠 Debian GNU/Linux",
+      "format": "  󰊠 Arch Linux",
       "outputColor": "cyan",
     },
     {
