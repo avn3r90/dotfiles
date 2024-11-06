@@ -7,7 +7,7 @@ export EDITOR=micro
 #ogolne
 alias cat="bat"
 alias ls="eza --icons"
-alias mv="mv -va"
+alias mv="mv -v"
 alias cp="rsync -ah --progress"
 alias poweroff="sudo /sbin/poweroff"
 alias lu="du -sh * | sort -h" 
