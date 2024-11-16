@@ -19,8 +19,8 @@ alias showupdate="apt list --upgradable"
 #aliasy yadm
 alias ya="yadm add"
 alias yc="yadm commit; yadm push"
-alias ys="yadm status"
+#alias ys="yadm status"
 #alias yp="yadm push"
 
 # lokalny chroot do budowania z aur
-export repolokalne="/home/fi9o/chroot/root/home/fi9o/"
+export repolokalne="/home/fi9o/chroot/home/fi9o/"
