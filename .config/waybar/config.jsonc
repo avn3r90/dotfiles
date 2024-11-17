@@ -91,8 +91,8 @@
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "~/.config/HyprV/waybar/scripts/brightness --inc",
-        "on-scroll-down": "~/.config/HyprV/waybar/scripts/brightness --dec",
+        "on-scroll-up": "~/.config/waybar/scripts/brightness --inc",
+        "on-scroll-down": "~/.config/waybar/scripts/brightness --dec",
         "min-length": 6
     },
 
@@ -122,10 +122,10 @@
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-muted": "",
-        "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle",
+        "on-click": "~/.config/waybar/scripts/volume --toggle",
         "on-click-right": "pavucontrol",
-        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --inc",
-        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --dec",
+        "on-scroll-up": "~/.config/waybar/scripts/volume --inc",
+        "on-scroll-down": "~/.config/waybar/scripts/volume --dec",
         "scroll-step": 5,
         "format-icons": {
             "headphone": "",
