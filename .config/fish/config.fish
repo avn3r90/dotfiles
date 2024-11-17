@@ -19,7 +19,7 @@ alias showupdate="apt list --upgradable"
 #aliasy yadm
 alias ya="yadm add"
 alias yc="yadm commit; yadm push"
-#alias ys="yadm status"
+alias ys="yadm status"
 #alias yp="yadm push"
 
 # lokalny chroot do budowania z aur
