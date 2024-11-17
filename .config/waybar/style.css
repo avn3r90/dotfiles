@@ -1,200 +1,145 @@
-/*@import url("/home/obnomus/.cache/wal/colors-waybar.css");*/
-
-
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "CaskaydiaCove Nerd Font";
-    font-weight: bold;
-    font-size: 15px;
-    min-height: 0;
+  min-height: 0;
+  min-width: 0;
+  font-family: Lexend, "Font Awesome 6 Free Solid";
+  font-size: 14px;
+  font-weight: 600;
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0);
-    color: #cdd6f4;
-}
-
-tooltip {
-    background: #1e1e2e;
-    opacity: 0.7;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #11111b;
-}
-
-tooltip label{
-    color: #cdd6f4;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  /* background-color: #1e1e2e; */
+  /* background-color: #181825; */
+  background-color: #11111b;
+  /* background-color: rgba(24, 24, 37, 0.6); */
 }
 
 #workspaces button {
-    padding: 5px;
-    color: #313244;
-    margin-right: 5px;
-}
-
-#workspaces button.active {
-    color: #a6adc8;
-}
-
-#workspaces button.focused {
-    color: #a6adc8;
-    background: #eba0ac;
-    border-radius: 10px;
-}
-
-#workspaces button.urgent {
-    color: #11111b;
-    background: #a6e3a1;
-    border-radius: 10px;
+  min-height: 0;
+  min-width: 0;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: #1e1e2e;
+  color: #cdd6f4;
 }
 
 #workspaces button:hover {
-    background: #11111b;
-    color: #cdd6f4;
-    border-radius: 10px;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #1e1e2e;
+  background-color: #cdd6f4;
 }
 
-#custom-launch_wofi,
-#custom-lock_screen,
-#custom-light_dark,
-#custom-power_btn,
-#custom-power_profile,
-#custom-weather,
-#custom-myhyprv,
-#window,
-#cpu,
-#disk,
-#custom-updates,
-#memory,
-#battery,
+#workspaces button.active {
+  background-color: #1e1e2e;
+  color: #89b4fa;
+}
+
+#workspaces button.urgent {
+  background-color: #1e1e2e;
+  color: #f38ba8;
+}
+
+#clock,
 #pulseaudio,
-#network,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#cpu,
 #tray,
-#temperature,
-#workspaces,
-#backlight {
-    background: #000000;
-    opacity: 0.7;
-    padding: 0px 10px;
-    margin: 3px 0px;
-    margin-top: 7px;
-    border: 0px;
+#memory,
+#disk,
+#window,
+#mpris {
+  min-height: 0;
+  min-width: 0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  margin: 0.4rem 0.25rem;
+  /* background-color: #181825; */
+  background-color: #1e1e2e;
 }
 
-#network , #backlight, #custom-launch_wofi, #cpu {
-    border-radius: 10px 0px 0px 10px;
+#mpris.playing {
+  color: #a6e3a1;
 }
 
-#custom-light_dark, #workspaces, #pulseaudio.microphone, #battery, #disk {
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
+#mpris.paused {
+  color: #9399b2;
 }
 
-#temperature.critical {
-    color: #e92d4d;
+#custom-sep {
+  padding: 0px;
+  color: #585b70;
 }
 
-
-#workspaces {
-    padding-right: 0px;
-    padding-left: 5px;
+#custom-spotify.playing {
+  color: #a6e3a1;
 }
 
-#window {
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+#custom-spotify.liked {
+  color: #cba6f7;
+}
+#custom-spotify.added {
+  color: #f9e2af;
 }
 
-#custom-launch_wofi {
-    color: #cdd6f4;
-    margin-left: 5px;
-    border-right: 0px;
+#custom-spotify.removed {
+  color: #f38ba8;
 }
 
-#pulseaudio {
-    color: #cdd6f4;
-    border-left: 0px;
-    border-right: 0px;
+#custom-spotify.paused {
+  color: #9399b2;
 }
 
-#pulseaudio.microphone {
-    color: #cdd6f4;
-    border-left: 0px;
-    border-right: 0px;
+window#waybar.empty #window {
+  background-color: transparent;
 }
 
-#battery {
-    color: #cdd6f4;
-    border-left: 0px;
+#cpu {
+  color: #94e2d5;
 }
 
-#tray{
-    background: #000000;
-    opacity: 0.7;
-    padding: 0px 10px;
-    margin: 3px 0px;
-    margin-right: 5px;
-    margin-top: 7px;
-    border: 5px;
-    border-radius: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
+#memory {
+  color: #cba6f7;
+}
+#disk {
+  color: #cba6f7;
 }
 
 #clock {
-    background: #000000;
-    opacity: 0.7;
-    padding: 0px 10px;
-    margin: 3px 0px;
-    margin-top: 7px;
-    border: 5px;
-    border-radius: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
+  color: #74c7ec;
 }
 
-#taskbar {
-    background: #000000;
-    opacity: 0.7;
-    padding: 0px 10px;
-    margin: 3px 0px;
-    margin-top: 7px;
-    border: 5px;
-    border-radius: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
+#clock.simpleclock {
+  color: #89b4fa;
 }
 
-#taskbar button {
-    box-shadow: none;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-    color: #93cee9;
-    animation: gradient_f 5s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+#window {
+  color: #a6e3a1;
 }
 
-#taskbar button:hover {
-    background: #11111b;
-    color: #cdd6f4;
+#pulseaudio {
+  color: #b4befe;
 }
 
+#pulseaudio.muted {
+  color: #a6adc8;
+}
 
-#taskbar button.active {
-    background: #93cee9;
-    color: #ffffff;
-    margin-left: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 3px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+#custom-logo {
+  color: #89b4fa;
+}
+
+#custom-power {
+  color: #f38ba8;
+  font-size: 14px;
+}
+
+tooltip {
+  background-color: #181825;
+  border: 2px solid #89b4fa;
 }
