@@ -24,3 +24,5 @@ alias ys="yadm status"
 
 # lokalny chroot do budowania z aur
 export repolokalne="/home/fi9o/chroot/home/fi9o/"
+
+alias archfetch="fastfetch --config examples/2.jsonc"
