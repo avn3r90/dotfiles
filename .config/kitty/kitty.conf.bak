@@ -71,6 +71,6 @@ map ctrl+shift+q close_tab
 
 
 # BEGIN_KITTY_THEME
-# Vibrant Ink
+# Blazer
 include current-theme.conf
 # END_KITTY_THEME
