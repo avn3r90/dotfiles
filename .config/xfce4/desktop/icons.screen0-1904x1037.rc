@@ -1,6 +1,26 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
+[/home/fi9o/Desktop/firefox.desktop]
+row=0
+col=1
+
+[/home/fi9o/Desktop/org.mozilla.Thunderbird.desktop]
+row=0
+col=2
+
+[/home/fi9o/Desktop/smartcode-stremio.desktop]
+row=1
+col=1
+
+[/home/fi9o/Desktop/org.qbittorrent.qBittorrent.desktop]
+row=2
+col=0
+
+[/home/fi9o/Desktop/signal-desktop.desktop]
+row=1
+col=0
+
 [/home/fi9o]
 row=0
 col=0
