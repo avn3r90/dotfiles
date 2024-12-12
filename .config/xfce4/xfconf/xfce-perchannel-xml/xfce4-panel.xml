@@ -29,7 +29,6 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="applicationsmenu"/>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="uint" value="1"/>
     </property>
@@ -51,6 +50,9 @@
         <value type="string" value="pulseaudio system tray"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="QNapi"/>
+        <value type="string" value="qBittorrent"/>
+        <value type="string" value="Stremio"/>
         <value type="string" value="pasystray"/>
         <value type="string" value="blueman"/>
         <value type="string" value="nm-applet"/>
@@ -69,6 +71,28 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="known-players" type="string" value="firefox"/>
+    </property>
+    <property name="plugin-1" type="string" value="whiskermenu">
+      <property name="show-button-title" type="bool" value="true"/>
+      <property name="recent" type="array">
+        <value type="string" value="btop.desktop"/>
+        <value type="string" value="xfce4-mime-settings.desktop"/>
+        <value type="string" value="kitty.desktop"/>
+        <value type="string" value="qnapi.desktop"/>
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="org.qbittorrent.qBittorrent.desktop"/>
+        <value type="string" value="signal-desktop.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+      </property>
+      <property name="favorites" type="array">
+        <value type="string" value="xfce4-web-browser.desktop"/>
+        <value type="string" value="xfce4-mail-reader.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="signal-desktop.desktop"/>
+        <value type="string" value="org.qbittorrent.qBittorrent.desktop"/>
+        <value type="string" value="com.stremio.stremio.desktop"/>
+      </property>
     </property>
   </property>
 </channel>

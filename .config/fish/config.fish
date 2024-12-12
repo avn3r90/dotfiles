@@ -26,3 +26,5 @@ alias ys="yadm status"
 export repolokalne="/home/fi9o/chroot/home/fi9o/"
 
 alias archfetch="fastfetch --config examples/2.jsonc"
+
+alias napisy="~/.local/bin/OpenSubtitlesDownload.py --cli -u avn3r90 -p RylBa3^C3Rj%g#&vWK73S@ -l pl"
