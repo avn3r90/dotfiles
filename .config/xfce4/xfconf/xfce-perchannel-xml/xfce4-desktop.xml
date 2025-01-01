@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-desktop" version="1.0">
   <property name="backdrop" type="empty">
@@ -7,7 +7,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/fi9o/Obrazy/wall.png"/>
+          <property name="last-image" type="string" value="/home/fi9o/Obrazy/wallhaven-yxdrex.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
@@ -32,6 +32,13 @@
           <property name="last-image" type="string" value="/home/fi9o/Obrazy/wallhaven-3lp2md.jpg"/>
         </property>
       </property>
+      <property name="monitorDP-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/fi9o/Obrazy/wallhaven-rrl1kj.jpg"/>
+        </property>
+      </property>
     </property>
   </property>
   <property name="last" type="empty">
@@ -41,6 +48,10 @@
   <property name="desktop-icons" type="empty">
     <property name="file-icons" type="empty">
       <property name="show-filesystem" type="bool" value="false"/>
+      <property name="migrated-4.19" type="array">
+        <value type="string" value="b88ef308aaa5d305cb0f04773ab6c0312184c9b2"/>
+      </property>
     </property>
   </property>
+  <property name="last-settings-migration-version" type="uint" value="1"/>
 </channel>

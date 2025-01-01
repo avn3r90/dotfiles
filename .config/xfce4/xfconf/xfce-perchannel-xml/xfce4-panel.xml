@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
   <property name="configver" type="int" value="2"/>
@@ -6,7 +6,7 @@
     <value type="int" value="1"/>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=8;x=960;y=1064"/>
+      <property name="position" type="string" value="p=8;x=1280;y=1426"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="false"/>
       <property name="icon-size" type="uint" value="16"/>
@@ -20,8 +20,8 @@
         <value type="int" value="6"/>
         <value type="int" value="8"/>
         <value type="int" value="10"/>
-        <value type="int" value="7"/>
         <value type="int" value="11"/>
+        <value type="int" value="7"/>
         <value type="int" value="12"/>
         <value type="int" value="13"/>
         <value type="int" value="14"/>
@@ -43,6 +43,8 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="nawiązano bezprzewodowe połączenie sieciowe wi-fi „laitoswiatlowod10606”: laitoswiatlowod10606 (90%)"/>
+        <value type="string" value="nawiązano bezprzewodowe połączenie sieciowe wi-fi „laitoswiatlowod10606”: laitoswiatlowod10606 (74%)"/>
         <value type="string" value="brak połączenia sieciowego"/>
         <value type="string" value="aplet networkmanager"/>
         <value type="string" value="pasystray"/>
@@ -67,7 +69,6 @@
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-14" type="string" value="actions"/>
-    <property name="plugin-7" type="string" value="battery"/>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="known-players" type="string" value="firefox"/>
@@ -75,24 +76,17 @@
     <property name="plugin-1" type="string" value="whiskermenu">
       <property name="show-button-title" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="btop.desktop"/>
+        <value type="string" value="xfce4-screenshooter.desktop"/>
+        <value type="string" value="org.xfce.mousepad.desktop"/>
+        <value type="string" value="org.xfce.mousepad-settings.desktop"/>
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="nixos-manual.desktop"/>
+        <value type="string" value="signal-desktop.desktop"/>
+        <value type="string" value="xfce4-terminal.desktop"/>
         <value type="string" value="xfce4-mime-settings.desktop"/>
-        <value type="string" value="kitty.desktop"/>
-        <value type="string" value="qnapi.desktop"/>
         <value type="string" value="firefox.desktop"/>
-        <value type="string" value="org.qbittorrent.qBittorrent.desktop"/>
-        <value type="string" value="signal-desktop.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-      </property>
-      <property name="favorites" type="array">
-        <value type="string" value="xfce4-web-browser.desktop"/>
-        <value type="string" value="xfce4-mail-reader.desktop"/>
-        <value type="string" value="xfce4-file-manager.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="signal-desktop.desktop"/>
-        <value type="string" value="org.qbittorrent.qBittorrent.desktop"/>
-        <value type="string" value="com.stremio.stremio.desktop"/>
       </property>
     </property>
+    <property name="plugin-7" type="string" value="battery"/>
   </property>
 </channel>
