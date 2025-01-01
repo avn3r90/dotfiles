@@ -21,6 +21,11 @@
 			searchDownKey = [ "^[[A" "^P" ];
 			searchUpKey = [ "^[[B" "^N" ];
 		};
+		oh-my-zsh = {
+		  enable = true;
+		  plugins = [ "git" "thefuck" ];
+		  theme = "lukerandall";
+		};
 		envExtra = '' 
 			export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 			export PATH=$HOME/.local/bin:$HOME/.bin:$PATH

@@ -34,13 +34,14 @@
     pkgs.xfce.xfce4-whiskermenu-plugin
     pkgs.qogir-icon-theme
     pkgs.qogir-theme
-    
+
     # inne
     #pkgs.ghostty
     pkgs.kitty
     pkgs.blueman
     pkgs.signal-desktop
     pkgs.thunderbird
+    #pkgs.kodi
     #pkgs.qbittorrent
     #pkgs.stremio
     #pkgs.vlc
@@ -71,7 +72,12 @@
   grep = "grep --color=always";
   df = "df -h";
 
-  # Alias's for safe and forced reboots
+  #yadm
+  ya = "yadm add";
+  yc = "yadm commit; yadm push";
+  ys = "yadm status";
+
+  # restarty i wylaczanie
  	rebootsafe = "sudo shutdown -r now";
  	rebootforce = "sudo shutdown -r -n now";
  	shutdown = "sudo shutdown";
@@ -83,12 +89,12 @@
   sz = "source ~/.config/zsh/.zshrc";
   };
 
-  programs.starship = {
-    enable = true;
-    settings = {
-      # sprawdz ustawienia starship
-    };
-  };
+  #programs.starship = {
+  #  enable = true;
+  #  settings = {
+  #    # sprawdz ustawienia starship
+  #  };
+  #};
   
   home.file = {
   };
