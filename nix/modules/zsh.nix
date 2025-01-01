@@ -1,34 +1,39 @@
 { config, pkgs, ... }:
-
 {
- programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-
-    zplug = {
-      enable = true;
-      plugins = [
-        { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
-      #  { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; } # Installations with additional options. For the list of options, please refer to Zplug README.
-      ];
-    };
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" "thefuck" ];
-      theme = "tjkirch";
-    };
-  
-    shellAliases = {
-      catt = "bat";
-      update = "sudo nixos-rebuild switch --flake ~/nix/#toster";
-      lss = "eza --icons";
-      mvv = "mv -v";
-      cpr = "rsync -ah --progress";
-      
-    };
-    history.size = 10000;
-  };
+    programs.zsh = {
+		enable = true;
+		autocd = true;
+		autosuggestion.enable = true;
+		#enableAutosuggestions = true;
+		defaultKeymap = "viins";
+		dotDir = ".config/zsh";
+		history = {
+			path = ".cache/zsh/history";
+			save = 20000;
+			size = 20000;
+		};
+		completionInit = ''
+			autoload -Uz compinit
+			compinit
+		'';
+		historySubstringSearch = {
+			enable = true;
+			searchDownKey = [ "^[[A" "^P" ];
+			searchUpKey = [ "^[[B" "^N" ];
+		};
+		envExtra = '' 
+			export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+			export PATH=$HOME/.local/bin:$HOME/.bin:$PATH
+		'';
+		initExtraBeforeCompInit = ''
+			zstyle ':completion:*' completer _menu _expand _complete _correct _approximate
+			zstyle ':completion:*' completions 0
+			zstyle ':completion:*' glob 0
+			zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+			zstyle ':completion:*' max-errors 10
+			zstyle ':completion:*' special-dirs true
+			zstyle ':completion:*' substitute 1
+			zstyle :compinstall filename '/home/yusuf/.config/zsh/.zshrc'
+		'';
+	};
 }
