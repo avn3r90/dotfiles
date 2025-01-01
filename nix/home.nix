@@ -8,16 +8,17 @@
 
   home.packages = [
     # DWM i graty
-    pkgs.dwm
-    pkgs.st
-    pkgs.dmenu
-    pkgs.sxhkd
+    #pkgs.dwm
+    #pkgs.st
+    #pkgs.dmenu
+    #pkgs.sxhkd
   
     # konsola
     pkgs.asciinema
     pkgs.bat
     pkgs.eza
     pkgs.fzf
+    pkgs.grc
     pkgs.btop
     pkgs.micro
     pkgs.yazi
@@ -29,7 +30,7 @@
     pkgs.ncdu
     pkgs.nh
     #pkgs.nix-search
-    #pkgs.nvd
+    pkgs.nvd
     pkgs.nix-tree
     pkgs.thefuck
     pkgs.tldr
@@ -54,8 +55,10 @@
   ];
 
   imports = [
-  	./modules/zsh.nix
+  #	./modules/zsh.nix
+    ./modules/fish.nix
   	./modules/firefox.nix
+  #	./modules/starship.nix
   ];
 
 
@@ -92,7 +95,7 @@
 
   sduo = "sudo";
   suod = "sudo";
-  sz = "source ~/.config/zsh/.zshrc";
+  #sz = "source ~/.config/zsh/.zshrc";
   };
 
   #programs.starship = {

@@ -58,7 +58,6 @@
   # Enable the XFCE Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
-  #services.xserver.windowManager.dwm.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -100,9 +99,22 @@
       "fi9o" = import ./home.nix;
     };
   };
+
+  programs.bash = {
+    interactiveShellInit = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
+  };
+
+  programs.fish.enable = true;
+  users.users.fi9o.shell = pkgs.fish;
   
-  programs.zsh.enable = true;
-  users.users.fi9o.shell = pkgs.zsh;
+  #programs.zsh.enable = true;
+  #users.users.fi9o.shell = pkgs.zsh;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
