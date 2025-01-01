@@ -10,6 +10,9 @@
   # najnowszy kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # Wlaczam zram
+  zramSwap.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -55,6 +58,7 @@
   # Enable the XFCE Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
+  #services.xserver.windowManager.dwm.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {

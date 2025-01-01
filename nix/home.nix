@@ -7,6 +7,12 @@
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
   home.packages = [
+    # DWM i graty
+    pkgs.dwm
+    pkgs.st
+    pkgs.dmenu
+    pkgs.sxhkd
+  
     # konsola
     pkgs.asciinema
     pkgs.bat
@@ -41,7 +47,7 @@
     pkgs.blueman
     pkgs.signal-desktop
     pkgs.thunderbird
-    #pkgs.kodi
+    pkgs.kodi
     #pkgs.qbittorrent
     #pkgs.stremio
     #pkgs.vlc
@@ -62,13 +68,13 @@
   
   home.shellAliases = {
   l = "eza -l --icons";
- 	ls = "eza --icons";
+ 	lss = "eza --icons";
  	ll = "eza -la --icons";
  	ld = "eza -lD --icons";
  	cp = "cp -i";
  	mv = "mv -i";
  	mkdir = "mkdir -p";
- 	cat = "bat";
+ 	catt = "bat";
   grep = "grep --color=always";
   df = "df -h";
 
