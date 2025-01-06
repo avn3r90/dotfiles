@@ -1,0 +1,10 @@
+ttf-cascadia-code-nerd
+ttf-firacode-nerd
+ttf-hack-nerd
+ttf-inconsolata-nerd
+ttf-jetbrains-mono-nerd
+ttf-meslo-nerd
+ttf-mononoki-nerd
+ttf-roboto-mono-nerd
+ttf-sourcecodepro-nerd
+ttf-ubuntu-mono-nerd
