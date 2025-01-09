@@ -3,7 +3,6 @@ if status is-interactive
 end
 
 export EDITOR=micro
-#export PATH=$PATH:/home/fi9o/.local/bin
 
 #ogolne
 alias cat="bat"
@@ -29,3 +28,4 @@ export repolokalne="/home/fi9o/chroot/home/fi9o/"
 alias fetchtoo="fastfetch --config examples/2.jsonc"
 
 #alias napisy="~/.local/bin/OpenSubtitlesDownload.py --cli -u avn3r90 -p RylBa3^C3Rj%g#&vWK73S@ -l pl"
+~/.local/bin/oh-my-posh init fish --config ~/.cache/oh-my-posh/themes/peru.omp.json | source
