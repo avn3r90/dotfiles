@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
   <property name="configver" type="int" value="2"/>
@@ -18,8 +18,6 @@
         <value type="int" value="4"/>
         <value type="int" value="5"/>
         <value type="int" value="6"/>
-        <value type="int" value="8"/>
-        <value type="int" value="10"/>
         <value type="int" value="11"/>
         <value type="int" value="7"/>
         <value type="int" value="12"/>
@@ -43,6 +41,9 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="nawiązano bezprzewodowe połączenie sieciowe wi-fi „laitoswiatlowod10606”: laitoswiatlowod10606 (72%)"/>
+        <value type="string" value="nawiązano bezprzewodowe połączenie sieciowe wi-fi „laitoswiatlowod10606-5g”: laitoswiatlowod10606-5g (55%)"/>
+        <value type="string" value="notification-daemon"/>
         <value type="string" value="nawiązano bezprzewodowe połączenie sieciowe wi-fi „laitoswiatlowod10606”: laitoswiatlowod10606 (90%)"/>
         <value type="string" value="nawiązano bezprzewodowe połączenie sieciowe wi-fi „laitoswiatlowod10606”: laitoswiatlowod10606 (74%)"/>
         <value type="string" value="brak połączenia sieciowego"/>
@@ -60,7 +61,6 @@
         <value type="string" value="nm-applet"/>
       </property>
     </property>
-    <property name="plugin-10" type="string" value="notification-plugin"/>
     <property name="plugin-11" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
@@ -69,21 +69,14 @@
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-14" type="string" value="actions"/>
-    <property name="plugin-8" type="string" value="pulseaudio">
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="known-players" type="string" value="firefox"/>
-    </property>
     <property name="plugin-1" type="string" value="whiskermenu">
       <property name="show-button-title" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="org.xfce.mousepad.desktop"/>
-        <value type="string" value="xfce4-screenshooter.desktop"/>
-        <value type="string" value="xfce4-terminal.desktop"/>
-        <value type="string" value="xfce-mouse-settings.desktop"/>
-        <value type="string" value="xfce4-screensaver-preferences.desktop"/>
-        <value type="string" value="firefox.desktop"/>
-        <value type="string" value="org.xfce.mousepad-settings.desktop"/>
-        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="thunderbird-bin.desktop"/>
+        <value type="string" value="firefox-bin.desktop"/>
+        <value type="string" value="xfce-session-settings.desktop"/>
+        <value type="string" value="signal-desktop.desktop"/>
       </property>
     </property>
     <property name="plugin-7" type="string" value="battery"/>

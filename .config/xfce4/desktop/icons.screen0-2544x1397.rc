@@ -1,15 +1,27 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[FF02-5BF8]
-row=0
-col=0
-
-[Kosz]
+[/home/fi9o/Pulpit/signal-desktop.desktop]
 row=1
 col=0
 
+[/home/fi9o/Pulpit/thunderbird-bin.desktop]
+row=0
+col=2
+
+[/home/fi9o/Pulpit/firefox-bin.desktop]
+row=0
+col=1
+
+[/home/fi9o/Pulpit/kitty.desktop]
+row=2
+col=0
+
+[Kosz]
+row=12
+col=23
+
 [/home/fi9o]
-row=3
+row=0
 col=0
 
