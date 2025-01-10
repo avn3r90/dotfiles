@@ -12,9 +12,6 @@ alias cp="rsync -ah --progress"
 alias poweroff="sudo /sbin/poweroff"
 alias lu="du -sh * | sort -h" 
 alias rm="rm -rf"
-alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
-alias showupdate="apt list --upgradable"
 
 #aliasy yadm
 alias ya="yadm add"
