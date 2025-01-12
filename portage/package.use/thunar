@@ -1,6 +1,0 @@
-xfce-base/thunar udisks
-# required by media-sound/pulseaudio-daemon-17.0-r1::gentoo[alsa-plugin,alsa]
-# required by media-libs/libpulse-17.0::gentoo
-# required by www-client/firefox-bin-134.0::gentoo
-# required by firefox-bin (argument)
->=media-plugins/alsa-plugins-1.2.12 pulseaudio
