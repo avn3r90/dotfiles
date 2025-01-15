@@ -1,12 +1,13 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
 
-font pango: Dejavu Sans Mono 10
-gaps inner 10px
-gaps outer 10px
+#font pango: Dejavu Sans Mono 1
+gaps inner 5px
+gaps outer 5px
+
+# ukrycie belki z nazwa okna
+#hide_edge_borders --i3 smart
+#workspace_layout tabbed
+
+default_border none 
 
 #input "type:keyboard" xkb_options caps:swapescape
 input "type:pointer" accel_profile flat
@@ -24,11 +25,9 @@ set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
 set $term kitty
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
 set $menu wofi --show run
 
 ### Output configuration
@@ -77,7 +76,7 @@ output * bg /home/fi9o/Obrazy/wallhaven-rrl1kj.jpg fill
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+Shift+c kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -86,13 +85,19 @@ output * bg /home/fi9o/Obrazy/wallhaven-rrl1kj.jpg fill
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     #Firefox
     bindsym $mod+f exec firefox-bin
+
+    #Thunderbird 
+    bindsym $mod+y exec thunderbird-bin
+
+    #Signal
+    bindsym $mod+t exec signal-desktop
 #
 # Moving around:
 #
@@ -206,14 +211,21 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+bindsym $mod+m output "HDMI-A-2" enable ; output "eDP-1" disable
+
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-	swaybar_command waybar
+	swaybar_command swaybar
 }
+
+
 
 include /etc/sway/config.d/*
 
-exec_always $HOME/.screenlayout/sam_monitor.sh
+exec mako
+exec nm-applet
+exec blueman-applet
+exec gentoo-pipewire-launcher
