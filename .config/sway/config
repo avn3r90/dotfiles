@@ -28,7 +28,7 @@ set $right l
 
 # Your preferred terminal emulator
 set $term kitty
-set $menu wofi --show run
+set $menu fuzzel -b 434c5eff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m b48eadff -w 60 --show-actions -f "JetBrains Mono:weight=thin:size=12"
 
 ### Output configuration
 #
@@ -91,13 +91,17 @@ output * bg /home/fi9o/Obrazy/wallhaven-rrl1kj.jpg fill
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     #Firefox
-    bindsym $mod+f exec firefox-bin
+    bindsym $mod+f exec firefox
 
     #Thunderbird 
-    bindsym $mod+y exec thunderbird-bin
+    bindsym $mod+y exec thunderbird
 
     #Signal
     bindsym $mod+t exec signal-desktop
+
+    #Pcmanfm
+    #bindsym $mod+g exec pcmanfm
+    
 #
 # Moving around:
 #
@@ -210,8 +214,9 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
 bindsym $mod+m output "HDMI-A-2" enable ; output "eDP-1" disable
+
+
 
 #
 # Status Bar:
@@ -221,11 +226,9 @@ bar {
 	swaybar_command swaybar
 }
 
-
-
 include /etc/sway/config.d/*
 
 exec mako
 exec nm-applet
 exec blueman-applet
-exec gentoo-pipewire-launcher
+#exec gentoo-pipewire-launcher
