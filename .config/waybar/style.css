@@ -1,151 +1,139 @@
 * {
-  min-height: 0;
-  min-width: 0;
-  font-family: Lexend, "Font Awesome 6 Free Solid";
-  font-size: 14px;
-  font-weight: 600;
+    border: none;
+    border-radius: 0;
+    font-family: Roboto,'Font Awesome 5', 'SFNS Display',  Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
 }
 
 window#waybar {
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  /* background-color: #1e1e2e; */
-  /* background-color: #181825; */
-  background-color: #11111b;
-  /* background-color: rgba(24, 24, 37, 0.6); */
+    background: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: #ffffff;
 }
 
+window#waybar.hidden {
+    opacity: 0.0;
+}
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
-  min-height: 0;
-  min-width: 0;
-  padding: 0.3rem 0.6rem;
-  margin: 0.4rem 0.25rem;
-  border-radius: 6px;
-  /* background-color: #181825; */
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+    padding: 0 5px;
+    background: transparent;
+    color: #ffffff;
+    border-bottom: 3px solid transparent;
 }
 
-#workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
-  color: #1e1e2e;
-  background-color: #cdd6f4;
-}
-
-#workspaces button.active {
-  background-color: #1e1e2e;
-  color: #89b4fa;
+#workspaces button.focused {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
 }
 
 #workspaces button.urgent {
-  background-color: #1e1e2e;
-  color: #f38ba8;
+    background-color: #eb4d4b;
 }
 
-#clock,
-#pulseaudio,
-#custom-logo,
-#custom-power,
-#custom-spotify,
-#battery,
-#cpu,
-#tray,
-#memory,
-#disk,
-#window,
-#mpris {
-  min-height: 0;
-  min-width: 0;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  margin: 0.4rem 0.25rem;
-  /* background-color: #181825; */
-  background-color: #1e1e2e;
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
 }
 
-#mpris.playing {
-  color: #a6e3a1;
-}
-
-#mpris.paused {
-  color: #9399b2;
-}
-
-#custom-sep {
-  padding: 0px;
-  color: #585b70;
-}
-
-#custom-spotify.playing {
-  color: #a6e3a1;
-}
-
-#custom-spotify.liked {
-  color: #cba6f7;
-}
-#custom-spotify.added {
-  color: #f9e2af;
-}
-
-#custom-spotify.removed {
-  color: #f38ba8;
-}
-
-#custom-spotify.paused {
-  color: #9399b2;
-}
-
-window#waybar.empty #window {
-  background-color: transparent;
-}
-
-#battery {
-  color: #94e2d5;
-}
-
-#cpu {
-  color: #94e2d5;
-}
-
-#memory {
-  color: #cba6f7;
-}
-#disk {
-  color: #cba6f7;
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+    padding: 0 10px;
+    margin: 0 5px;
 }
 
 #clock {
-  color: #74c7ec;
+    background-color: #64727D;
 }
 
-#clock.simpleclock {
-  color: #89b4fa;
+#battery {
+    background-color: #ffffff;
+    color: #000000;
 }
 
-#window {
-  color: #a6e3a1;
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    background: #2ecc71;
+    color: #000000;
+}
+
+#memory {
+    background: #9b59b6;
+}
+
+#backlight {
+    background: #90b1b1;
+}
+
+#network {
+    background: #2980b9;
+}
+
+#network.disconnected {
+    background: #f53c3c;
 }
 
 #pulseaudio {
-  color: #b4befe;
+    background: #f1c40f;
+    color: #000000;
 }
 
 #pulseaudio.muted {
-  color: #a6adc8;
+    background: #90b1b1;
+    color: #2a5c45;
 }
 
-#custom-logo {
-  color: #89b4fa;
+#custom-media {
+    background: #66cc99;
+    color: #2a5c45;
 }
 
-#custom-power {
-  color: #f38ba8;
-  font-size: 14px;
+.custom-spotify {
+    background: #66cc99;
 }
 
+.custom-vlc {
+    background: #ffa000;
+}
 
-tooltip {
-  background-color: #181825;
-  border: 2px solid #89b4fa;
+#temperature {
+    background: #f0932b;
+}
+
+#temperature.critical {
+    background: #eb4d4b;
+}
+
+#tray {
+    background-color: #2980b9;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
 }

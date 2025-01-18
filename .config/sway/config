@@ -7,9 +7,13 @@ gaps outer 5px
 #hide_edge_borders --i3 smart
 #workspace_layout tabbed
 
-default_border none 
+default_border pixel 3
+set $border_focused #07f2fa
+set $border_unfocused #bdc3c7
+set $focused_background #eff0f1
+set $unfocused_background #bdc3c7
 
-#input "type:keyboard" xkb_options caps:swapescape
+
 input "type:pointer" accel_profile flat
 
 input * {
@@ -33,7 +37,7 @@ set $menu fuzzel -b 434c5eff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/fi9o/Obrazy/wallhaven-rrl1kj.jpg fill
+output * bg /home/fi9o/Obrazy/wallhaven-dpg7jm.png fill
 #
 # Example configuration:
 #
@@ -91,10 +95,10 @@ output * bg /home/fi9o/Obrazy/wallhaven-rrl1kj.jpg fill
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     #Firefox
-    bindsym $mod+f exec firefox
+    bindsym $mod+f exec firefox-bin
 
     #Thunderbird 
-    bindsym $mod+y exec thunderbird
+    bindsym $mod+y exec thunderbird-bin
 
     #Signal
     bindsym $mod+t exec signal-desktop
@@ -216,14 +220,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 bindsym $mod+m output "HDMI-A-2" enable ; output "eDP-1" disable
 
-
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-	swaybar_command swaybar
+	swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
@@ -231,4 +236,4 @@ include /etc/sway/config.d/*
 exec mako
 exec nm-applet
 exec blueman-applet
-#exec gentoo-pipewire-launcher
+exec gentoo-pipewire-launcher
