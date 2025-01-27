@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"], // wywalam custom/media bo nie kompilowalem z pulseaudio
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "network", "cpu", "memory", "backlight", "battery", "clock"], // po tray bylo pulseaudio
+    "modules-right": ["tray", "network", "cpu", "memory", "custom/disk_root", "custom/disk_home", "backlight", "battery", "clock"], // po tray bylo pulseaudio
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": true,
@@ -48,6 +48,16 @@
     },
     "memory": {
         "format": "{}% "
+    },
+    "custom/disk_root": {
+    	"format": "{} / 󱛟 ",
+		"interval": 30,
+		"exec": "df -h --output=avail / | tail -1 | tr -d ' '"
+    },
+    "custom/disk_home": {
+    	"format": "{} /home 󰠦 ",
+		"interval": 30,
+		"exec": "df -h --output=avail $HOME | tail -1 | tr -d ' '"
     },
     "backlight": {
         // "device": "acpi_video1",

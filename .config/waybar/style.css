@@ -37,7 +37,7 @@ window#waybar.hidden {
     border-bottom: 3px solid #ffffff;
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #custom-disk_root, #custom-disk_home {
     padding: 0 10px;
     margin: 0 5px;
 }
@@ -79,7 +79,16 @@ window#waybar.hidden {
 }
 
 #memory {
-    background: #9b59b6;
+    background: #2ecc71;
+    color: #000000;
+}
+
+#custom-disk_root {
+	background: #9b59b6;
+}
+
+#custom-disk_home {
+	background: #9b59b6;	
 }
 
 #backlight {

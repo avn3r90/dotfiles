@@ -109,7 +109,7 @@ output * bg /home/fi9o/Obrazy/wallhaven-dpg7jm.png fill
     bindsym $mod+t exec signal-desktop
 
     #Pcmanfm
-    #bindsym $mod+g exec pcmanfm
+    bindsym $mod+g exec pcmanfm
     
 #
 # Moving around:
