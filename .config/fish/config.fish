@@ -23,4 +23,6 @@ alias ys="yadm status"
 alias fetchtoo="fastfetch --config examples/2.jsonc"
 
 #alias napisy="~/.local/bin/OpenSubtitlesDownload.py --cli -u avn3r90 -p RylBa3^C3Rj%g#&vWK73S@ -l pl"
-~/.local/bin/oh-my-posh init fish --config ~/.cache/oh-my-posh/themes/peru.omp.json | source
+alias ohmyposh="~/.local/bin/oh-my-posh"
+~/.local/bin/oh-my-posh init fish --config ~/.cache/oh-my-posh/themes/peru.omp.json | source #ewentualnie paradox
+set -U fish_greeting

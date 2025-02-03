@@ -42,7 +42,7 @@ set $menu fuzzel -b 434c5eff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/fi9o/Obrazy/wallhaven-dpg7jm.png fill
+output * bg /home/fi9o/Obrazy/wall.jpg fill
 #
 # Example configuration:
 #
