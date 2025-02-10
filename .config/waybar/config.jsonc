@@ -5,7 +5,7 @@
     // "width": 120, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"], // wywalam custom/media bo nie kompilowalem z pulseaudio
-    "modules-center": ["sway/window"],
+    // "modules-center": ["sway/window"],
     "modules-right": ["tray", "network", "cpu", "memory", "custom/disk_root", "custom/disk_home", "backlight", "battery", "clock"], // po tray bylo pulseaudio
     // Modules configuration
      "sway/workspaces": {
