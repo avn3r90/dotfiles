@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto,'Font Awesome 7', 'SFNS Display',  Helvetica, Arial, sans-serif;
+    font-family: Roboto,'Font Awesome 5', 'SFNS Display',  Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
 }
@@ -17,7 +17,7 @@ window#waybar.hidden {
 }
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
-    padding: 0 2px;
+    padding: 0 5px;
     background: transparent;
     color: #ffffff;
     border-bottom: 3px solid transparent;
@@ -39,7 +39,7 @@ window#waybar.hidden {
 
 #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #custom-disk_root, #custom-disk_home {
     padding: 0 10px;
-    margin: 0 1px;
+    margin: 0 5px;
 }
 
 #clock {
