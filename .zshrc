@@ -105,4 +105,23 @@ source $ZSH/oh-my-zsh.sh
 alias oh-my-posh="/home/fi9o/.local/bin/oh-my-posh"
 #plugin zewnetrzny
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
-#eval "(oh-my-posh init zsh)"
+
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/peru.omp.json)"
+
+#ogolne
+alias cat="bat"
+alias ls="eza --icons"
+alias mv="mv -v"
+alias cp_="rsync -ah --progress"
+alias poweroff="sudo /sbin/poweroff"
+alias lu="du -sh * | sort -h" 
+alias rm="rm -rf"
+
+#aliasy yadm
+alias ya="yadm add"
+alias yc="yadm commit; yadm push"
+alias ys="yadm status"
+#alias yp="yadm push"
+
+# lokalny chroot do budowania z aur
+alias fetchtoo="fastfetch --config examples/2.jsonc"
