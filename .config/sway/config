@@ -8,10 +8,10 @@ gaps outer 5px
 #workspace_layout tabbed
 
 default_border pixel 3
-set $border_focused #07f2fa
-set $border_unfocused #bdc3c7
-set $focused_background #eff0f1
-set $unfocused_background #bdc3c7
+set $border_focused #03d3fc  
+set $border_unfocused #636e72  
+set $focused_background #eff0f1  
+set $unfocused_background #bdc3c7 
 
 
 input "type:pointer" accel_profile flat

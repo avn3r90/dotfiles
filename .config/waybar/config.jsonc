@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"], // wywalam custom/media bo nie kompilowalem z pulseaudio
     // "modules-center": ["sway/window"],
-    "modules-right": ["tray", "network", "cpu", "memory", "custom/disk_root", "custom/disk_home", "backlight", "battery", "clock"], // po tray bylo pulseaudio
+    "modules-right": ["tray", "network", "cpu", "memory", "custom/disk_root", "backlight", "battery", "clock"], // po tray bylo pulseaudio, usunalem custom/disk_home
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": true,
