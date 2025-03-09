@@ -37,11 +37,11 @@ set $right l
 
 # Your preferred terminal emulator
 set $term kitty
-set $menu fuzzel -b 434c5eff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m b48eadff -w 60 --show-actions -f "JetBrains Mono:weight=thin:size=12"
+set $menu fuzzel -b 434c5eff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m b48eadff -w 60 --show-actions -f "JetBrains Mono:weight=thin:size=14"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/fi9o/Obrazy/wall.jpg fill
+output * bg /home/fi9o/Obrazy/szaregory.png fill
 #
 # Example configuration:
 #
@@ -99,7 +99,7 @@ output * bg /home/fi9o/Obrazy/wall.jpg fill
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     #Firefox
-    bindsym $mod+f exec firefox-bin
+    bindsym $mod+f exec librewolf-bin
 
     #Thunderbird 
     bindsym $mod+y exec thunderbird-bin
