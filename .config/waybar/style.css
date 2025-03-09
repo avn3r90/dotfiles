@@ -1,148 +1,194 @@
-* {
-    border: none;
-    border-radius: 0;
-    font-family: Roboto,'Font Awesome 7', 'SFNS Display',  Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
-}
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
 
-window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
-}
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
 
-window#waybar.hidden {
-    opacity: 0.0;
-}
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button {
-    padding: 0 2px;
-    background: transparent;
-    color: #ffffff;
-    border-bottom: 3px solid transparent;
-}
+@keyframes blink-warning {
+    70% {
+        color: white;
+    }
 
-#workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
-
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #custom-disk_root, #custom-disk_home {
-    padding: 0 10px;
-    margin: 0 1px;
-}
-
-#clock {
-    background-color: #64727D;
-}
-
-#battery {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-#battery.charging {
-    color: #ffffff;
-    background-color: #26A65B;
-}
-
-@keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        color: white;
+        background-color: orange;
     }
 }
 
-#battery.critical:not(.charging) {
-    background: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
+@keyframes blink-critical {
+    70% {
+      color: white;
+    }
+
+    to {
+        color: white;
+        background-color: red;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+    background: #323232;
+    color: white;
+    font-family: Cantarell, Noto Sans, sans-serif;
+    font-size: 13px;
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#battery {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
+#battery.warning {
+    color: orange;
+}
+
+#battery.critical {
+    color: red;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#clock {
+    font-weight: bold;
+}
+
 #cpu {
-    background: #2ecc71;
-    color: #000000;
+  /* No styles */
+}
+
+#cpu.warning {
+    color: orange;
+}
+
+#cpu.critical {
+    color: red;
 }
 
 #memory {
-    background: #2ecc71;
-    color: #000000;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-#custom-disk_root {
-	background: #9b59b6;
+#memory.warning {
+    color: orange;
 }
 
-#custom-disk_home {
-	background: #9b59b6;	
+#memory.critical {
+    color: red;
+    animation-name: blink-critical;
+    animation-duration: 2s;
 }
 
-#backlight {
-    background: #90b1b1;
+#mode {
+    background: #64727D;
+    border-top: 2px solid white;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
 }
 
 #network {
-    background: #2980b9;
+    /* No styles */
 }
 
 #network.disconnected {
-    background: #f53c3c;
+    color: orange;
 }
 
 #pulseaudio {
-    background: #f1c40f;
-    color: #000000;
+    /* No styles */
 }
 
 #pulseaudio.muted {
-    background: #90b1b1;
-    color: #2a5c45;
+    /* No styles */
 }
 
-#custom-media {
-    background: #66cc99;
-    color: #2a5c45;
-}
-
-.custom-spotify {
-    background: #66cc99;
-}
-
-.custom-vlc {
-    background: #ffa000;
+#custom-spotify {
+    color: rgb(102, 220, 105);
 }
 
 #temperature {
-    background: #f0932b;
+    /* No styles */
 }
 
 #temperature.critical {
-    background: #eb4d4b;
+    color: red;
 }
 
 #tray {
-    background-color: #2980b9;
+    /* No styles */
 }
 
-#idle_inhibitor {
-    background-color: #2d3436;
+#window {
+    font-weight: bold;
 }
 
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+#workspaces button {
+    border-top: 2px solid transparent;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #888888;
+}
+
+#workspaces button.focused {
+    border-color: #4c7899;
+    color: white;
+    background-color: #285577;
+}
+
+#workspaces button.urgent {
+    border-color: #c9545d;
+    color: #c9545d;
 }
