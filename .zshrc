@@ -128,5 +128,3 @@ alias ys="yadm status"
 
 # lokalny chroot do budowania z aur
 alias fetchtoo="fastfetch --config examples/2.jsonc"
-
-ufetch
