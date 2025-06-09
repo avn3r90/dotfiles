@@ -29,10 +29,10 @@ input * {
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
+#set $left h
+#set $down j
+#set $up k
+#set $right l
 
 # Your preferred terminal emulator
 set $term kitty
@@ -130,10 +130,10 @@ workspace 2 output HDMI-A-2
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+#    bindsym $mod+$left focus left
+#    bindsym $mod+$down focus down
+#    bindsym $mod+$up focus up
+#    bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -141,10 +141,10 @@ workspace 2 output HDMI-A-2
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+ #   bindsym $mod+Shift+$left move left
+ #   bindsym $mod+Shift+$down move down
+ #   bindsym $mod+Shift+$up move up
+ #   bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -222,10 +222,10 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+ #   bindsym $left resize shrink width 10px
+ #   bindsym $down resize grow height 10px
+ #   bindsym $up resize shrink height 10px
+ #   bindsym $right resize grow width 10px
 
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
@@ -239,6 +239,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 bindsym $mod+m output "HDMI-A-2" enable ; output "eDP-1" disable
+
+#Swaylock
+bindsym $mod+l exec swaylock --ignore-empty-password --show-failed-attempts --color 1e1e1e
+
+#Swayidle
+exec swayidle -w \
+  timeout 900 'swaymsg "output * power off"' \
+  resume 'swaymsg "output * power on"'
 
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+

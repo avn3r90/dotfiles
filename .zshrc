@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias oh-my-posh="/home/fi9o/.local/bin/oh-my-posh"
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/peru.omp.json)"
-
+eval "$(zoxide init zsh)"
 #plugin zewnetrzny
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
 
@@ -128,3 +128,8 @@ alias ys="yadm status"
 
 # lokalny chroot do budowania z aur
 alias fetchtoo="fastfetch --config examples/2.jsonc"
+
+alias cp="~/.local/bin/advcp -g"
+alias mv="~/.local/bin/advmv -g"
+alias aria2torreent="aria2c --bt-detach-seed-only"
+alias lastmerged="doas genlop -l --date '1 day ago'"
