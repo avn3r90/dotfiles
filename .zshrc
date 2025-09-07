@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias oh-my-posh="/home/fi9o/.local/bin/oh-my-posh"
-eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/peru.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/catppuccin_frappe.omp.json)" #bylo theme peru
 eval "$(zoxide init zsh)"
 #plugin zewnetrzny
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
@@ -133,3 +133,4 @@ alias cp="~/.local/bin/advcp -g"
 alias mv="~/.local/bin/advmv -g"
 alias aria2torreent="aria2c --bt-detach-seed-only"
 alias lastmerged="doas genlop -l --date '1 day ago'"
+alias shred="shred -n 7 -z -u -v"

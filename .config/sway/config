@@ -41,7 +41,7 @@ set $browser librewolf-bin
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/fi9o/Obrazy/szaregory.png fill
+output * bg /home/fi9o/Obrazy/wallhaven.png fill
 #
 # Example configuration:
 #
