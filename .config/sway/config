@@ -124,7 +124,7 @@ workspace 2 output HDMI-A-2
     bindsym $mod+t exec signal-desktop
 
     #Pcmanfm
-    bindsym $mod+g exec pcmanfm
+    bindsym $mod+g exec nemo
     
 #
 # Moving around:
