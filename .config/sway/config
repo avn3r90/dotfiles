@@ -124,7 +124,7 @@ workspace 2 output HDMI-A-2
     bindsym $mod+t exec signal-desktop
 
     #Pcmanfm
-    bindsym $mod+g exec nemo
+    bindsym $mod+g exec pcmanfm
     
 #
 # Moving around:
@@ -266,4 +266,5 @@ assign [app_id="kitty"] workspace number 2
 exec mako
 #exec nm-applet
 exec blueman-applet
+exec pavucontrol
 exec gentoo-pipewire-launcher
