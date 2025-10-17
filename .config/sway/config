@@ -259,12 +259,19 @@ bar {
 	swaybar_command waybar
 }
 
+
 include /etc/sway/config.d/*
 
+#wielkosc pavucontrol
+for_window [app_id="pavucontrol"] floating enable, move position 1860 0
+
+#rozmieszczenie okien
 assign [app_id="LibreWolf"] workspace number 1
 assign [app_id="kitty"] workspace number 2
+
+#autostart
 exec mako
 #exec nm-applet
 exec blueman-applet
-exec pavucontrol
+#exec pavucontrol
 exec gentoo-pipewire-launcher
