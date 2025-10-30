@@ -40,30 +40,22 @@ set $menu fuzzel -b 434c5eff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m 
 set $browser librewolf-bin
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/fi9o/Obrazy/wallhaven.png fill
+# Jednakowa tapeta na oba ekrany
+#output * bg /home/fi9o/Obrazy/gentoo.png fill
 #
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+# Dwie inne na dwa ekrany
+output HDMI-A-1 bg /home/fi9o/Obrazy/wallhaven.png fill
+output DP-1 bg /home/fi9o/Obrazy/gentoo.png fill 
 
-output HDMI-A-1 pos 0 0
-output HDMI-A-2 pos 2560 0
+
+output HDMI-A-1 pos 0    0
+output DP-1     pos 2560 0 
+#output HDMI-A-2 pos 2560 0
 
 workspace 1 output HDMI-A-1
-workspace 2 output HDMI-A-2
+workspace 2 output DP-1
+#workspace 2 output HDMI-A-2
 
-#output HDMI-A-1 {
-#    position 0 0
-#    resolution 2560x1440
-#}
-
-#output HDMI-A-2 {
-#    position 2560 0
-#    resolution 2560x1440
-#}
 
 ### Idle configuration
 #

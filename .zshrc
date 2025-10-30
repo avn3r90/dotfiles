@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git grc thefuck tldr fzf zsh-autosuggestions zsh-history-substring-search web-search z)
+plugins=(git grc thefuck tldr fzf web-search z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +107,8 @@ eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/peru.omp.json)" 
 eval "$(zoxide init zsh)"
 #plugin zewnetrzny
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/site-functions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/site-functions/zsh
 
 #screenshot + edycja - slurp, swappy + grim
 alias screenshot='grim -g "$(slurp)" - | swappy -f -'
@@ -129,8 +131,8 @@ alias ys="yadm status"
 # lokalny chroot do budowania z aur
 alias fetchtoo="fastfetch --config examples/2.jsonc"
 
-alias cp="~/.local/bin/advcp -g"
-alias mv="~/.local/bin/advmv -g"
+#alias cp="~/.local/bin/advcp -g"
+#alias mv="~/.local/bin/advmv -g"
 alias aria2torreent="aria2c --bt-detach-seed-only"
 alias lastmerged="doas genlop -l --date '1 day ago'"
 alias shred="shred -n 7 -z -u -v"
