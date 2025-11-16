@@ -1,140 +1,100 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+###############################################
+#   Podstawowa konfiguracja Oh My Zsh
+###############################################
 
-# Path to your Oh My Zsh installation.
+# Ścieżka do instalacji Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# Motyw — minimalny i domyślny
 ZSH_THEME="robbyrussell"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# Lista pluginów Oh My Zsh (tylko aktywne)
+plugins=(
+  git
+  grc
+  thefuck
+  tldr
+  fzf
+  web-search
+  z
+  history-substring-search
+)
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git grc thefuck tldr fzf web-search z)
-
+# Wczytanie Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+###############################################
+#   Dodatkowe pluginy spoza Oh My Zsh
+###############################################
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias oh-my-posh="/home/fi9o/.local/bin/oh-my-posh"
-eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/peru.omp.json)" #bylo theme peru
+# Zoxide — szybka nawigacja po katalogach
 eval "$(zoxide init zsh)"
-#plugin zewnetrzny
-source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/site-functions/zsh-autosuggestions.zsh
-#source /usr/share/zsh/site-functions/zsh
 
-#screenshot + edycja - slurp, swappy + grim
+# Oh-my-posh — prompt
+alias oh-my-posh="/home/fi9o/.local/bin/oh-my-posh"
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/peru.omp.json)"
+
+# Syntax highlighting
+source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
+
+# Autosuggestions
+source /usr/share/zsh/site-functions/zsh-autosuggestions.zsh
+
+
+###############################################
+#   Uzupełnianie (completion)
+###############################################
+
+autoload -U compinit promptinit
+compinit
+
+# Styl promptu Gentoo (potrzebny jeśli oh-my-posh nie działa)
+promptinit
+prompt gentoo
+
+# Cache na automatyczne uzupełnianie — szybsze działanie
+zstyle ':completion::complete:*' use-cache 1
+
+
+###############################################
+#   Alias: screenshot + edycja
+#   grim + slurp + swappy
+###############################################
+
 alias screenshot='grim -g "$(slurp)" - | swappy -f -'
 
-#ogolne
-alias cat="bat"
-alias ls="eza --icons"
+
+###############################################
+#   Ogólne aliasy i skróty
+###############################################
+
+alias cat="bat"                     # lepszy cat
+alias ls="eza --icons"              # lepszy ls
 alias mv="mv -v"
 alias cp_="rsync -ah --progress"
 alias poweroff="doas /sbin/poweroff"
-alias lu="du -sh * | sort -h" 
+alias lu="du -sh * | sort -h"
 alias rm="rm -rf"
+alias fetchtoo="fastfetch --config examples/2.jsonc"
 
-#aliasy yadm
+alias aria2torrent="aria2c --bt-detach-seed-only"
+
+alias lastmerged="doas genlop -l --date '1 day ago'"
+alias shred="shred -n 7 -z -u -v"
+
+
+###############################################
+#   Alias: yadm
+###############################################
+
 alias ya="yadm add"
 alias yc="yadm commit; yadm push"
 alias ys="yadm status"
-#alias yp="yadm push"
 
-# lokalny chroot do budowania z aur
-alias fetchtoo="fastfetch --config examples/2.jsonc"
 
-#alias cp="~/.local/bin/advcp -g"
-#alias mv="~/.local/bin/advmv -g"
-alias aria2torreent="aria2c --bt-detach-seed-only"
-alias lastmerged="doas genlop -l --date '1 day ago'"
-alias shred="shred -n 7 -z -u -v"
+###############################################
+#   Zmienne środowiskowe
+###############################################
 
 export PATH="$HOME/.cargo/bin:$PATH"
