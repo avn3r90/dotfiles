@@ -57,8 +57,12 @@ set $menu wofi --show drun -I
 output HDMI-A-2 pos 0 0 res 2560x1440
 output HDMI-A-1 pos 2560 0 res 2560x1440
 
-# Tapeta na wszystkie ekrany
-output * bg /home/fi9o/Obrazy/gentoo.png fill
+# Tapeta na jeden ekran
+#output * bg /home/fi9o/Obrazy/gentoo.png fill
+
+# Tapeta per ekran
+output HDMI-A-2 bg ~/Obrazy/gentoo_l.jpeg fill
+output HDMI-A-1 bg ~/Obrazy/gentoo_p.jpeg fill
 
 # Przypisanie workspace do ekranów
 workspace 2 output HDMI-A-1   # prawy ekran
