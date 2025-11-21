@@ -112,6 +112,16 @@ require("lazy").setup({
       })
     end,
   },
+  ---------------------------------------------------------------------------
+  -- Autopairs (automatyczne zamykanie nawiasów)
+  ---------------------------------------------------------------------------
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup({})
+    end,
+  },
 
 })
 

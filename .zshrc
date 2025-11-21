@@ -83,6 +83,7 @@ alias aria2torrent="aria2c --bt-detach-seed-only"
 alias lastmerged="doas genlop -l --date '1 day ago'"
 alias shred="shred -n 7 -z -u -v"
 
+alias cheatvim="fzf < ~/.config/nvim/nvim.md"
 
 ###############################################
 #   Alias: yadm

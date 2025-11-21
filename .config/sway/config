@@ -206,7 +206,7 @@ include /etc/sway/config.d/*
 for_window [app_id="pavucontrol"] floating enable, move position 1860 0
 
 # Automatyczne przypisania okien
-assign [app_id="LibreWolf"] workspace number 1
+assign [app_id="chromium-bin"] workspace number 1
 assign [app_id="kitty"]     workspace number 2
 
 
@@ -218,4 +218,4 @@ exec mako
 #exec nm-applet
 exec blueman-applet
 #exec pavucontrol
-exec gentoo-pipewire-launcher
+#exec gentoo-pipewire-launcher
