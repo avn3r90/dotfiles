@@ -32,7 +32,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 
 # Oh-my-posh — prompt
-alias oh-my-posh="/home/fi9o/.local/bin/oh-my-posh"
+#alias oh-my-posh="/home/fi9o/.local/bin/oh-my-posh"
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/peru.omp.json)"
 
 # Syntax highlighting
@@ -81,7 +81,7 @@ alias fetchtoo="fastfetch --config examples/2.jsonc"
 alias aria2torrent="aria2c --bt-detach-seed-only"
 
 alias lastmerged="doas genlop -l --date '1 day ago'"
-alias shred="shred -n 7 -z -u -v"
+alias shred="~/.local/bin/shredall.sh"
 
 alias cheatvim="fzf < ~/.config/nvim/nvim.md"
 
@@ -98,4 +98,4 @@ alias ys="yadm status"
 #   Zmienne środowiskowe
 ###############################################
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin/:$PATH"
