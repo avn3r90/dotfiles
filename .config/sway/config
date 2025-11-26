@@ -16,7 +16,6 @@ set $border_unfocused #636e72
 set $focused_background   #eff0f1
 set $unfocused_background #bdc3c7
 
-
 ##############################
 #  USTAWIENIA WEJŚCIA (INPUT)
 ##############################
@@ -44,7 +43,7 @@ input * {
 ##############################
 
 set $mod Mod4
-set $term kitty
+set $term alacritty
 set $browser chromium-browser-bin
 #set $menu fuzzel -b 434c5eff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m b48eadff -w 60 --show-actions -f "JetBrains Mono:weight=thin:size=14" --icon-theme=Qogir
 set $menu wofi --show drun -I
@@ -98,7 +97,6 @@ bindsym $mod+g exec pcmanfm
 
 
 ### Poruszanie się między oknami
-
 bindsym $mod+Left  focus left
 bindsym $mod+Down  focus down
 bindsym $mod+Up    focus up

@@ -1,7 +1,8 @@
 style = ~/.config/wofi/menu.css
 
-width=600
+width=700
 height=500
+columns=2
 location=center
 show=drun
 prompt=Apps
