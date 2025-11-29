@@ -108,6 +108,9 @@ bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 
+# Przesuwanie okien LPM, zmiana rozmiaru PPM w trybie floating
+floating_modifier $mod normal
+
 ### Przełączanie workspace
 
 bindsym $mod+1 workspace number 1
