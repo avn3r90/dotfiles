@@ -43,7 +43,7 @@ input * {
 ##############################
 
 set $mod Mod4
-set $term alacritty
+set $term alacritty #ale śmigam też z kitty
 set $browser chromium-browser-bin
 #set $menu fuzzel -b 434c5eff -t d8dee9ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m b48eadff -w 60 --show-actions -f "JetBrains Mono:weight=thin:size=14" --icon-theme=Qogir
 set $menu wofi --show drun -I
@@ -60,8 +60,8 @@ output HDMI-A-1 pos 2560 0 res 2560x1440
 #output * bg /home/fi9o/Obrazy/gentoo.png fill
 
 # Tapeta per ekran
-output HDMI-A-2 bg ~/Obrazy/gentoo_l.jpeg fill
-output HDMI-A-1 bg ~/Obrazy/gentoo_p.jpeg fill
+output HDMI-A-2 bg ~/Obrazy/wall_l.png fill
+output HDMI-A-1 bg ~/Obrazy/wall_p.png fill
 
 # Przypisanie workspace do ekranów
 workspace 2 output HDMI-A-1   # prawy ekran

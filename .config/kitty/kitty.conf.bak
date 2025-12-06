@@ -1,5 +1,5 @@
 # terminal opacity and blur
-background_opacity 0.95
+background_opacity 0.85
 background_blur 1
 
 # advance 
@@ -71,6 +71,6 @@ map ctrl+shift+q close_tab
 
 
 # BEGIN_KITTY_THEME
-# Oceanic Material
+# Afterglow
 include current-theme.conf
 # END_KITTY_THEME
