@@ -94,7 +94,7 @@ bindsym $mod+f exec librewolf-bin
 bindsym $mod+y exec thunderbird-bin
 bindsym $mod+t exec signal-desktop
 bindsym $mod+g exec pcmanfm
-
+bindsym $mod+h exec blueman-manager
 
 ### Poruszanie się między oknami
 bindsym $mod+Left  focus left
