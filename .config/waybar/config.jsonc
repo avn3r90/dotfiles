@@ -16,6 +16,8 @@
     "custom/sep",
     "clock",
     "custom/sep",
+    "pulseaudio",
+    "custom/sep",
     "tray"
   ],
 
@@ -65,6 +67,22 @@
   "sway/window#title": {
     "format": "{title}"
   },
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+       "format-muted": " ",
+        "format-icons": {
+            "headphones": " ",
+            "handsfree": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
   "custom/sep": {
     "format": "|",
     "interval": 0
