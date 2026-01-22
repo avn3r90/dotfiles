@@ -6,8 +6,8 @@
 #font pango: Dejavu Sans Mono 1
 
 # Odstępy między oknami
-gaps inner 5px
-gaps outer 5px
+gaps inner 8px
+gaps outer 8px
 
 # Obramowania okien
 default_border pixel 3

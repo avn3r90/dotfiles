@@ -33,7 +33,7 @@ eval "$(zoxide init zsh)"
 
 # Oh-my-posh — prompt
 #alias oh-my-posh="/home/fi9o/.local/bin/oh-my-posh"
-eval "$(~/.local/bin/oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/catppuccin_frappe.omp.json)"
+eval "$(~/.local/bin/oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/froczh.omp.json)"
 
 # Syntax highlighting
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
