@@ -81,7 +81,7 @@ mouse = "Right"
 #threshold = 300
 
 [scrolling]
-history = 500
+history = 1500
 multiplier = 1
 
 [window]

@@ -1,8 +1,8 @@
 {
   "modules-left": [
-    "sway/workspaces",
+    "niri/workspaces",
     "custom/sep",
-    "sway/window#title"
+    "niri/window#title"
   ],
   "modules-right": [
     "custom/sep",
@@ -13,6 +13,8 @@
     "memory",
     "custom/sep",
     "disk",
+    "custom/sep",
+    "battery",
     "custom/sep",
     "clock",
     "custom/sep",

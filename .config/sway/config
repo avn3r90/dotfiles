@@ -53,22 +53,22 @@ set $menu wofi --show drun -I
 ##############################
 
 # Pozycjonowanie ekranów
-output HDMI-A-2 pos 0 0 res 2560x1440
-output HDMI-A-1 pos 2560 0 res 2560x1440
+output eDP-1 pos 0 0 res 1920x1080
+#output DP-1 pos 1920 0 res 3440x1440
 
 # Tapeta na jeden ekran
 #output * bg /home/fi9o/Obrazy/gentoo.png fill
 
 # Tapeta per ekran
-output HDMI-A-2 bg ~/Obrazy/wall_l.png fill
-output HDMI-A-1 bg ~/Obrazy/wall_p.png fill
+output HDMI-A-2 bg ~/Obrazy/maly.png fill
+output DP-1 bg ~/Obrazy/duzy.png fill
 
 # Przypisanie workspace do ekranów
-workspace 2 output HDMI-A-1   # prawy ekran
-workspace 1 output HDMI-A-2   # lewy ekran
+#workspace 2 output HDMI-A-1   # prawy ekran
+#workspace 1 output HDMI-A-2   # lewy ekran
 
 # kursor rozmiar i motyw
-seat seat0 xcursor_theme gentoo-blue 28
+seat seat0 xcursor_theme Qogir-Dark 28
 
 ##############################
 #  SKRÓTY KLAWISZOWE
@@ -222,7 +222,6 @@ assign [app_id="kitty"]     workspace number 2
 ##############################
 
 exec mako
-#exec nm-applet
+exec nm-applet
 exec blueman-applet
-#exec pavucontrol
-#exec gentoo-pipewire-launcher
+exec_always kanshi
