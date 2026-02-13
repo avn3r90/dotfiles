@@ -35,10 +35,10 @@ output "DP-1" {
     position x=1921 y=0
 }
 
-//xwayland {
-//    enable true
-//}
-
+cursor {
+    xcursor-theme "Qogir-Dark"
+    xcursor-size 24
+}
 layout {
     gaps 16
     center-focused-column "never"
@@ -81,7 +81,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
 
-spawn-sh-at-startup "swaybg -i ~/Obrazy/gentoo.png"
+spawn-sh-at-startup "swaybg -i ~/Obrazy/duzy.png"
 
 hotkey-overlay {
 }
