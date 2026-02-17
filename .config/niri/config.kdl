@@ -76,9 +76,10 @@ layout {
 }
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "kanshi"
+//spawn-at-startup "kanshi"
 spawn-at-startup "waybar"
-spawn-at-startup "nm-applet"
+//spawn-at-startup "nm-applet"
+spawn-at-startup "sh" "-c" "sleep 3 && iwgtk -i"
 spawn-at-startup "blueman-applet"
 
 spawn-sh-at-startup "swaybg -i ~/Obrazy/duzy.png"
@@ -89,7 +90,40 @@ hotkey-overlay {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
+    // Okna pojawiające się/znikające
+    window-open {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+    
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"  // było "ease-in-quad" - nie ma takiej
+    }
 
+    // Przełączanie między workspace'ami
+    workspace-switch {
+        duration-ms 200
+        curve "ease-out-cubic"
+    }
+
+    // Przesuwanie okien
+    window-movement {
+        duration-ms 150
+        curve "ease-out-cubic"
+    }
+
+    // Zmiana rozmiaru okien
+    window-resize {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    // Poziome przesunięcie kolumn
+    horizontal-view-movement {
+        duration-ms 200
+        curve "ease-out-cubic"
+    }
 }
 
 window-rule {
@@ -117,10 +151,11 @@ window-rule {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-
+    
+    //Moje
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "wofi"; }
-    Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+D hotkey-overlay-title="Wofi" { spawn "wofi"; }
+    Mod+Alt+L hotkey-overlay-title="Blokuj ekran" { spawn "swaylock"; }
     Mod+t hotkey-overlay-title="Signal" { spawn "signal-desktop"; }
     Mod+y hotkey-overlay-title="Thunderbird" { spawn "thunderbird"; }
     Mod+g hotkey-overlay-title="PCManFM" { spawn "pcmanfm"; }
@@ -134,6 +169,9 @@ binds {
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+
+    Mod+Shift+F10 { spawn "niri" "msg" "output" "eDP-1" "off"; }
+    Mod+Shift+F11 { spawn "niri" "msg" "output" "eDP-1" "on"; }
 
     Mod+O repeat=false { toggle-overview; }
 
