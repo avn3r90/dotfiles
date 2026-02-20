@@ -70,15 +70,16 @@ layout {
         offset x=0 y=5
         color "#0007"
     }
-
+    
     struts {
     }
 }
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 //spawn-at-startup "kanshi"
-spawn-at-startup "waybar"
+//spawn-at-startup "waybar"
 //spawn-at-startup "nm-applet"
+spawn-at-startup "ashell"
 spawn-at-startup "sh" "-c" "sleep 3 && iwgtk -i"
 spawn-at-startup "blueman-applet"
 
