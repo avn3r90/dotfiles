@@ -158,7 +158,7 @@ binds {
     Mod+D hotkey-overlay-title="Wofi" { spawn "wofi"; }
     Mod+Alt+L hotkey-overlay-title="Blokuj ekran" { spawn "swaylock"; }
     Mod+t hotkey-overlay-title="Signal" { spawn "signal-desktop"; }
-    Mod+y hotkey-overlay-title="Thunderbird" { spawn "thunderbird"; }
+    Mod+y hotkey-overlay-title="Thunderbird" { spawn "thunderbird-bin"; }
     Mod+g hotkey-overlay-title="PCManFM" { spawn "pcmanfm"; }
     Mod+h hotkey-overlay-title="Blueman" { spawn "blueman-manager"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
