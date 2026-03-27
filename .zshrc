@@ -99,3 +99,5 @@ alias ys="yadm status"
 ###############################################
 
 export PATH="$HOME/.cargo/bin:$HOME/.local/bin/:$PATH"
+
+ufetch
